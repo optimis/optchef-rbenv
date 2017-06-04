@@ -4,6 +4,7 @@ require 'chefspec/berkshelf'
 describe 'optchef-rbenv::default' do
   let(:chef_run) do
     ChefSpec::Runner.new do |node|
+      node.set['ruby_build']['install_pkgs'] = []
       node.set['rbenv']['install_pkgs'] = [ 'git-core', 'grep' ]
     end.converge described_recipe
   end
@@ -13,6 +14,6 @@ describe 'optchef-rbenv::default' do
   end
 
   it 'should perform a system wide rbenv install' do
-    expect(chef_run).to include_recipe 'rbenv::system'
+    expect(chef_run).to include_recipe 'ruby_rbenv::system'
   end
 end
