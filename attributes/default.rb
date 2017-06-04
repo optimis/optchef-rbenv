@@ -1,6 +1,6 @@
 node.default['ruby_build']['upgrade'] = true
 
-ruby_version = '2.2.2'
+ruby_version = '2.3.3'
 node.default['rbenv']['rubies'] = [ ruby_version ]
 node.default['rbenv']['global'] = ruby_version
 
