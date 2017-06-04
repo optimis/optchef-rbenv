@@ -11,4 +11,4 @@ version           '2.2.2'
 supports          'ubuntu'
 
 depends           'ruby_build'
-depends           'rbenv', '~> 0.7.3'
+depends           'ruby_rbenv'
